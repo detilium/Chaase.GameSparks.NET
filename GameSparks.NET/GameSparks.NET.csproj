@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50579312-8640-443D-BBF7-48402B7F54E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameSparks.NET</RootNamespace>
+    <AssemblyName>Chaase.GameSparks.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\GameSparksAchievement.cs" />
+    <Compile Include="Entities\GameSparksBaseRequest.cs" />
+    <Compile Include="Entities\GameSparksBaseResponse.cs" />
+    <Compile Include="Entities\GameSparksBoughtItem.cs" />
+    <Compile Include="Entities\GameSparksBulkJob.cs" />
+    <Compile Include="Entities\GameSparksBundledGood.cs" />
+    <Compile Include="Entities\GameSparksChatMessage.cs" />
+    <Compile Include="Entities\GameSparksLocation.cs" />
+    <Compile Include="Entities\GameSparksChallengeInstance.cs" />
+    <Compile Include="Entities\GameSparksMessage.cs" />
+    <Compile Include="Entities\GameSparksPlayer.cs" />
+    <Compile Include="Entities\GameSparksChallengeTemplate.cs" />
+    <Compile Include="Entities\GameSparksChallengeTurnCount.cs" />
+    <Compile Include="Entities\GameSparksChallengeUserData.cs" />
+    <Compile Include="Entities\GameSparksLeaderboardData.cs" />
+    <Compile Include="Entities\GameSparksLeaderboardUserData.cs" />
+    <Compile Include="Entities\GameSparksMatchedPlayers.cs" />
+    <Compile Include="Entities\GameSparksPendingMatches.cs" />
+    <Compile Include="Entities\GameSparksPlayerFriend.cs" />
+    <Compile Include="Entities\GameSparksSocialConnection.cs" />
+    <Compile Include="Entities\GameSparksSwitchSummary.cs" />
+    <Compile Include="Entities\GameSparksTeam.cs" />
+    <Compile Include="Entities\GameSparksTransaction.cs" />
+    <Compile Include="Entities\GameSparksTransactionItem.cs" />
+    <Compile Include="Entities\GameSparksVirtualGood.cs" />
+    <Compile Include="Infrastructure\Exceptions\GameSparksForbiddenException.cs" />
+    <Compile Include="Infrastructure\GameSparksResponse.cs" />
+    <Compile Include="Infrastructure\Helpers\JsonHelper.cs" />
+    <Compile Include="Infrastructure\Settings\GameSparksSettings.cs" />
+    <Compile Include="Infrastructure\Requestor.cs" />
+    <Compile Include="Infrastructure\Urls.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Analytics\Requests\AnalyticsRequest.cs" />
+    <Compile Include="Services\Analytics\Requests\EndSessionRequest.cs" />
+    <Compile Include="Services\Analytics\Responses\AnalyticsResponse.cs" />
+    <Compile Include="Services\Analytics\Responses\EndSessionResponse.cs" />
+    <Compile Include="Services\Events\Requests\LogChallengeEventRequest.cs" />
+    <Compile Include="Services\Events\Requests\LogEventRequest.cs" />
+    <Compile Include="Services\Events\Responses\EventsResponse.cs" />
+    <Compile Include="Services\GameSparksAdminService.cs" />
+    <Compile Include="Services\Admin\Requests\BatchAdminRequest.cs" />
+    <Compile Include="Services\Admin\Requests\CancelBulkJobAdminRequest.cs" />
+    <Compile Include="Services\Admin\Requests\ListBulkJobsAdminRequest.cs" />
+    <Compile Include="Services\Admin\Requests\RevokePurchaseGoodsRequest.cs" />
+    <Compile Include="Services\Admin\Requests\ScheduleBulkJobAdminRequest.cs" />
+    <Compile Include="Services\Admin\Responses\BatchAdminResponse.cs" />
+    <Compile Include="Services\Admin\Responses\CancelBulkJobAdminResponse.cs" />
+    <Compile Include="Services\Admin\Responses\GameSparksBaseAdminReponse.cs" />
+    <Compile Include="Services\Admin\Responses\ListBulkJobsAdminResponse.cs" />
+    <Compile Include="Services\Admin\Responses\RevokePurchasedGoodsResponse.cs" />
+    <Compile Include="Services\Admin\Responses\ScheduledBulkJobAdminResponse.cs" />
+    <Compile Include="Services\Authentication\Responses\GameSparksAuthenticationResponse.cs" />
+    <Compile Include="Services\GameSparksAnalyticsService.cs" />
+    <Compile Include="Services\GameSparksAuthenticationService.cs" />
+    <Compile Include="Services\Authentication\Requests\AmazonConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\AuthenticationRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\DeviceAuthenticationRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\FacebookConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\GameCenterConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\GameSparksBaseAuthenticationRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\GameSparksConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\GooglePlayConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\GooglePlusConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\KongregateConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\NXConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\PSNConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\QQConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\RegistrationRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\SteamConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\TwitchConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\TwitterConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\ViberConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\WeChatConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\XBOXLiveConnectRequest.cs" />
+    <Compile Include="Services\Authentication\Requests\XboxOneConnectRequest.cs" />
+    <Compile Include="Services\GameSparksEventsService.cs" />
+    <Compile Include="Services\GameSparksLeaderboardsService.cs" />
+    <Compile Include="Services\GameSparksMessagesService.cs" />
+    <Compile Include="Services\GameSparksMiscService.cs" />
+    <Compile Include="Services\GameSparksMultiplayerService.cs" />
+    <Compile Include="Services\GameSparksPlayerService.cs" />
+    <Compile Include="Services\GameSparksStoreService.cs" />
+    <Compile Include="Services\GameSparksTeamsService.cs" />
+    <Compile Include="Services\Leaderboards\Requests\AroundMeLeaderboardRequest.cs" />
+    <Compile Include="Services\Leaderboards\Requests\GameSparksBaseLeaderboardsRequest.cs" />
+    <Compile Include="Services\Leaderboards\Requests\GetLeaderboardEntriesRequest.cs" />
+    <Compile Include="Services\Leaderboards\Requests\LeaderboardDataRequest.cs" />
+    <Compile Include="Services\Leaderboards\Requests\LeaderboardsEntriesRequest.cs" />
+    <Compile Include="Services\Leaderboards\Requests\ListLeaderboardsRequest.cs" />
+    <Compile Include="Services\Leaderboards\Requests\SocialLeaderboardDataRequest.cs" />
+    <Compile Include="Services\Leaderboards\Responses\GameSparksLeaderboardDataResponse.cs" />
+    <Compile Include="Services\Leaderboards\Responses\GameSparksLeaderboardResponse.cs" />
+    <Compile Include="Services\Leaderboards\Responses\ListLeaderboardsResponse.cs" />
+    <Compile Include="Services\Misc\Requests\GameSparksMiscRequest.cs" />
+    <Compile Include="Services\Misc\Requests\GetDownloadableRequest.cs" />
+    <Compile Include="Services\Misc\Requests\GetPropertyRequest.cs" />
+    <Compile Include="Services\Misc\Requests\GetPropertySetRequest.cs" />
+    <Compile Include="Services\Misc\Requests\GetUploadedRequest.cs" />
+    <Compile Include="Services\Misc\Requests\GetUploadUrlRequest.cs" />
+    <Compile Include="Services\Misc\Requests\PushRegistrationRequest.cs" />
+    <Compile Include="Services\Misc\Requests\SocialStatusRequest.cs" />
+    <Compile Include="Services\Misc\Responses\GameSparksBaseMiscResponse.cs" />
+    <Compile Include="Services\Misc\Responses\GetDownloadableResponse.cs" />
+    <Compile Include="Services\Misc\Responses\GetPropertyResponse.cs" />
+    <Compile Include="Services\Misc\Responses\GetPropertySetResponse.cs" />
+    <Compile Include="Services\Misc\Responses\GetUploadedResponse.cs" />
+    <Compile Include="Services\Misc\Responses\GetUploadUrlResponse.cs" />
+    <Compile Include="Services\Misc\Responses\PushRegistrationResponse.cs" />
+    <Compile Include="Services\Misc\Responses\SocialStatusResponse.cs" />
+    <Compile Include="Services\Multiplayer\Requests\AcceptChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\ChatOnChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\CreateChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\DeclineChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\FindChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\FindMatchRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\FindPendingMatchesRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\GameSparksBaseMultiplayerRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\GetChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\JoinChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\JoinPendingMatchRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\ListChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\ListChallengeTypeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\MatchDetailsRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\MatchmakingRequest.cs" />
+    <Compile Include="Services\Multiplayer\Requests\WithdrawChallengeRequest.cs" />
+    <Compile Include="Services\Multiplayer\Responses\AcceptChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\ChatOnChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\CreateChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\DeclineChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\FindChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\FindMatchResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\FindPendingMatchesResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\GameSparksBaseMultiplayerResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\GetChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\JoinChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\JoinPendingMatchResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\ListChallengeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\ListChallengeTypeResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\MatchDetailsResponse.cs" />
+    <Compile Include="Services\Multiplayer\Responses\WithdrawChallengeResponse.cs" />
+    <Compile Include="Services\Player\Requests\AccountDetailsRequest.cs" />
+    <Compile Include="Services\Player\Requests\ChangeUserDetailsRequest.cs" />
+    <Compile Include="Services\Player\Requests\DismissMessageRequest.cs" />
+    <Compile Include="Services\Player\Requests\DismissMultipleMessagesRequest.cs" />
+    <Compile Include="Services\Player\Requests\GetMessageRequest.cs" />
+    <Compile Include="Services\Player\Requests\ListAchievementsRequest.cs" />
+    <Compile Include="Services\Player\Requests\ListGameFriendsRequest.cs" />
+    <Compile Include="Services\Player\Requests\ListInviteFriendsRequest.cs" />
+    <Compile Include="Services\Player\Requests\ListMessageDetailRequest.cs" />
+    <Compile Include="Services\Player\Requests\ListMessageRequest.cs" />
+    <Compile Include="Services\Player\Requests\ListMessageSummaryRequest.cs" />
+    <Compile Include="Services\Player\Requests\ListTranactionsRequest.cs" />
+    <Compile Include="Services\Player\Requests\SendFriendMessageRequest.cs" />
+    <Compile Include="Services\Player\Requests\SocialDisconnectRequest.cs" />
+    <Compile Include="Services\Player\Requests\UpdateMessageRequest.cs" />
+    <Compile Include="Services\Player\Response\AccountDetailsResponse.cs" />
+    <Compile Include="Services\Player\Response\DismissMultipleMessagesResponse.cs" />
+    <Compile Include="Services\Player\Response\GameSparksBasePlayerResponse.cs" />
+    <Compile Include="Services\Player\Response\GetMessageResponse.cs" />
+    <Compile Include="Services\Player\Response\ListAchievementsResponse.cs" />
+    <Compile Include="Services\Player\Response\ListGameFriendsResponse.cs" />
+    <Compile Include="Services\Player\Response\ListInviteFriendsResponse.cs" />
+    <Compile Include="Services\Player\Response\ListMessageDetailResponse.cs" />
+    <Compile Include="Services\Player\Response\ListMessageResponse.cs" />
+    <Compile Include="Services\Player\Response\ListMessageSummaryResponse.cs" />
+    <Compile Include="Services\Player\Response\ListTransactionsResponse.cs" />
+    <Compile Include="Services\Store\Requests\AmazonBuyGoodsRequest.cs" />
+    <Compile Include="Services\Store\Requests\BuyVirtualGoodsRequest.cs" />
+    <Compile Include="Services\Store\Requests\ConsumeVirtualGoodRequest.cs" />
+    <Compile Include="Services\Store\Requests\GameSparksBaseStoreExternalRequest.cs" />
+    <Compile Include="Services\Store\Requests\GameSparksBaseStoreRequest.cs" />
+    <Compile Include="Services\Store\Requests\GooglePlayBuyGoodsRequest.cs" />
+    <Compile Include="Services\Store\Requests\IOSBuyGoodsRequest.cs" />
+    <Compile Include="Services\Store\Requests\ListVirtualGoodsRequest.cs" />
+    <Compile Include="Services\Store\Requests\PsnBuyGoodsRequest.cs" />
+    <Compile Include="Services\Store\Requests\SteamBuyGoodsRequest.cs" />
+    <Compile Include="Services\Store\Requests\WindowsBuyGoodsRequest.cs" />
+    <Compile Include="Services\Store\Responses\GameSparksBaseStoreResponse.cs" />
+    <Compile Include="Services\Store\Responses\GameSparksStoreExternalResponse.cs" />
+    <Compile Include="Services\Store\Responses\ListVirtualGoodsResponse.cs" />
+    <Compile Include="Services\Teams\Requests\CreateTeamRequest.cs" />
+    <Compile Include="Services\Teams\Requests\DropTeamRequest.cs" />
+    <Compile Include="Services\Teams\Requests\GameSparksBaseTeamsRequest.cs" />
+    <Compile Include="Services\Teams\Requests\GetMyTeamsRequest.cs" />
+    <Compile Include="Services\Teams\Requests\GetTeamRequest.cs" />
+    <Compile Include="Services\Teams\Requests\JoinTeamRequest.cs" />
+    <Compile Include="Services\Teams\Requests\LeaveTeamRequest.cs" />
+    <Compile Include="Services\Teams\Requests\ListTeamChatRequest.cs" />
+    <Compile Include="Services\Teams\Requests\ListTeamsRequest.cs" />
+    <Compile Include="Services\Teams\Requests\SendTeamChatMessageRequest.cs" />
+    <Compile Include="Services\Teams\Responses\CreateTeamResponse.cs" />
+    <Compile Include="Services\Teams\Responses\GameSparksBaseTeamsResponse.cs" />
+    <Compile Include="Services\Teams\Responses\GetMyTeamsResponse.cs" />
+    <Compile Include="Services\Teams\Responses\GetTeamResponse.cs" />
+    <Compile Include="Services\Teams\Responses\JoinTeamResponse.cs" />
+    <Compile Include="Services\Teams\Responses\LeaveTeamResponse.cs" />
+    <Compile Include="Services\Teams\Responses\ListTeamChatResponse.cs" />
+    <Compile Include="Services\Teams\Responses\ListTeamsResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Messages\Requests\" />
+    <Folder Include="Services\Messages\Responses\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
