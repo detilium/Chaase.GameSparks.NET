@@ -22,6 +22,8 @@ namespace GameSparks.NET.Services.Authentication.Requests
         public string RequestId { get; set; }
         [JsonProperty("segments")]
         public dynamic Segments { get; set; }
+        [JsonProperty("scriptData")]
+        public dynamic ScriptData { get; set; }
 
         /// <summary>
         /// Initialize a new RegistrationRequest
@@ -31,13 +33,15 @@ namespace GameSparks.NET.Services.Authentication.Requests
         /// <param name="userName"></param>
         /// <param name="requestId"></param>
         /// <param name="segments"></param>
-        public RegistrationRequest(string displayName, string password, string userName, dynamic segments, string requestId = "")
+        /// <param name="scriptData"></param>
+        public RegistrationRequest(string displayName, string password, string userName, dynamic segments, dynamic scriptData = null, string requestId = "")
         {
             DisplayName = displayName;
             Password = password;
             UserName = userName;
             RequestId = requestId;
             Segments = segments;
+            ScriptData = scriptData;
         }
     }
 }
