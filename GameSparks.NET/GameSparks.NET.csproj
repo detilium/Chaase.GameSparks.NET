@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <Version>0.2.0</Version>
-    <FileVersion>0.2.0</FileVersion>
+    <Version>0.2.0.1</Version>
+    <FileVersion>0.2.0.1</FileVersion>
     <Authors>Christian Haase</Authors>
     <Description>GameSparks.NET is a a REST API wrapper for the GameSparks REST API.</Description>
     <Copyright>Copyright (c) 2017 Christian Haase</Copyright>
@@ -18,11 +18,10 @@
 
   <PropertyGroup>
     <PackageId>Chaase.GameSparks.NET</PackageId>
-    <PackageVersion>0.2.0</PackageVersion>
+    <PackageVersion>0.2.0.1</PackageVersion>
     <PackageTags>web rest-api api-wrapper gamesparks .net game</PackageTags>
     <PackageProjectUrl>https://christianhaase.github.io/Chaase.GameSparks.NET/</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/ChristianHaase/Chaase.GameSparks.NET/blob/master/GameSparks.NET/gamesparks.png?raw=true</PackageIconUrl>
-    <PackageReleaseNotes>Converted package to support .NETStandard 1.4</PackageReleaseNotes>
+    <PackageIconUrl>https://raw.githubusercontent.com/ChristianHaase/Chaase.GameSparks.NET/master/gamesparks.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>
