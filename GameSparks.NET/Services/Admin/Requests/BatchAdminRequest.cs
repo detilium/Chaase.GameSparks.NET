@@ -26,8 +26,8 @@ namespace GameSparks.NET.Services.Admin.Requests
         public BatchAdminRequest(List<string> playerIds, dynamic request, string requestId = "")
         {
             PlayerIds = playerIds;
-            Request = request;
-            RequestId = request;
+            Request = requestId;
+            RequestId = requestId;
         }
     }
 }
