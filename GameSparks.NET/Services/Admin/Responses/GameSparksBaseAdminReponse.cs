@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GameSparks.NET.Entities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace GameSparks.NET.Services.Admin.Responses
 {
-    public class GameSparksBaseAdminReponse
+    public class GameSparksBaseAdminReponse : GameSparksBaseResponse
     {
-        [JsonProperty("requestId")]
-        public string RequestId { get; set; }
         [JsonProperty("scriptData")]
         public dynamic ScriptData { get; set; }
     }
