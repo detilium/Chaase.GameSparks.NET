@@ -20,10 +20,16 @@ namespace GameSparks.NET.Services.Admin.Requests
         /// </summary>
         /// <param name="bulkJobIds"></param>
         /// <param name="requestId"></param>
-        public ListBulkJobsAdminRequest(List<string> bulkJobIds, string requestId = "")
+        public ListBulkJobsAdminRequest(List<string> bulkJobIds, string authToken = "", string requestId = "")
         {
             BulkJobIds = bulkJobIds;
             RequestId = requestId;
+            AuthToken = authToken;
         }
+
+        /// <summary>
+        /// Initialize a new empty ListBulkJobsAdminRequest
+        /// </summary>
+        public ListBulkJobsAdminRequest() { }
     }
 }

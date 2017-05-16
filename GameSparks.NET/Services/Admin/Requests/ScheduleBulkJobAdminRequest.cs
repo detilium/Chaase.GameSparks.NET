@@ -32,7 +32,7 @@ namespace GameSparks.NET.Services.Admin.Requests
         /// <param name="scheduledTime"></param>
         /// <param name="script"></param>
         /// <param name="requestId"></param>
-        public ScheduleBulkJobAdminRequest(dynamic data, string moduleShortCode, dynamic playerQuery, DateTime scheduledTime, string script, string requestId = "")
+        public ScheduleBulkJobAdminRequest(dynamic data, string moduleShortCode, dynamic playerQuery, DateTime scheduledTime, string script, string authToken = "", string requestId = "")
         {
             Data = data;
             ModuleShortCode = moduleShortCode;
@@ -40,6 +40,12 @@ namespace GameSparks.NET.Services.Admin.Requests
             ScheduledTime = scheduledTime;
             Script = script;
             RequestId = requestId;
+            AuthToken = authToken;
         }
+
+        /// <summary>
+        /// Initialize a new empty ScheduleBulkJobAdminRequest
+        /// </summary>
+        public ScheduleBulkJobAdminRequest() { }
     }
 }

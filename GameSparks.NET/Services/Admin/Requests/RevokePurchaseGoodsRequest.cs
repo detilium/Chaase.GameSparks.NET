@@ -26,11 +26,17 @@ namespace GameSparks.NET.Services.Admin.Requests
         /// <param name="storeType"></param>
         /// <param name="transactionIds"></param>
         /// <param name="requestId"></param>
-        public RevokePurchaseGoodsRequest(string playerId, string storeType, List<string> transactionIds, string requestId = "")
+        public RevokePurchaseGoodsRequest(string playerId, string storeType, List<string> transactionIds, string authToken = "", string requestId = "")
         {
             PlayerId = playerId;
             StoreType = storeType;
             TransactionIds = transactionIds;
+            AuthToken = authToken;
         }
+
+        /// <summary>
+        /// Initialize a new empty RevokePurchaseGoodsRequest
+        /// </summary>
+        public RevokePurchaseGoodsRequest() { }
     }
 }

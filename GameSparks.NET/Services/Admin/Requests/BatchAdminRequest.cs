@@ -23,11 +23,17 @@ namespace GameSparks.NET.Services.Admin.Requests
         /// <param name="playerIds"></param>
         /// <param name="request"></param>
         /// <param name="requestId"></param>
-        public BatchAdminRequest(List<string> playerIds, dynamic request, string requestId = "")
+        public BatchAdminRequest(List<string> playerIds, dynamic request, string authToken = "", string requestId = "")
         {
             PlayerIds = playerIds;
             Request = requestId;
             RequestId = requestId;
+            AuthToken = authToken;
         }
+
+        /// <summary>
+        /// Initialize a new empty BatchAdminRequest
+        /// </summary>
+        public BatchAdminRequest() { }
     }
 }

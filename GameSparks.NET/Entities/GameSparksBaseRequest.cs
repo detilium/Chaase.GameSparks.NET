@@ -11,5 +11,7 @@ namespace GameSparks.NET.Entities
     {
         [JsonProperty("requestId")]
         public string RequestId { get; set; }
+        [JsonProperty("authToken")]
+        public string AuthToken { get; set; }
     }
 }
