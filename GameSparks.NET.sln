@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameSparks.NET", "GameSparks.NET\GameSparks.NET.csproj", "{50579312-8640-443D-BBF7-48402B7F54E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameSparks.NET.Authentication", "GameSparks.NET.Authentication\GameSparks.NET.Authentication.csproj", "{0C291FDA-1529-4D81-B1E6-F24D13A5BCA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +17,10 @@ Global
 		{50579312-8640-443D-BBF7-48402B7F54E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50579312-8640-443D-BBF7-48402B7F54E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50579312-8640-443D-BBF7-48402B7F54E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60019970-9054-4D35-868B-33FDD5F97953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60019970-9054-4D35-868B-33FDD5F97953}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60019970-9054-4D35-868B-33FDD5F97953}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60019970-9054-4D35-868B-33FDD5F97953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C291FDA-1529-4D81-B1E6-F24D13A5BCA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C291FDA-1529-4D81-B1E6-F24D13A5BCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C291FDA-1529-4D81-B1E6-F24D13A5BCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C291FDA-1529-4D81-B1E6-F24D13A5BCA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
