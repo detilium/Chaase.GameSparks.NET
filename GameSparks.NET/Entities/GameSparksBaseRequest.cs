@@ -13,5 +13,7 @@ namespace GameSparks.NET.Entities
         public string RequestId { get; set; }
         [JsonProperty("authToken")]
         public string AuthToken { get; set; }
+        [JsonProperty("scriptData")]
+        public dynamic ScriptData { get; set; }
     }
 }

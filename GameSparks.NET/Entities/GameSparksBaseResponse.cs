@@ -13,5 +13,7 @@ namespace GameSparks.NET.Entities
         public string RequestId { get; set; }
         [JsonProperty("error")]
         public dynamic Error { get; set; }
+        [JsonProperty("scriptData")]
+        public dynamic ScriptData { get; set; }
     }
 }

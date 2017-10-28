@@ -1,4 +1,5 @@
 ﻿using GameSparks.NET.Entities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,13 @@ namespace GameSparks.NET.Services.Events.Requests
 {
     public class LogEventRequest : GameSparksBaseRequest
     {
+        [JsonProperty("@class")]
         private string ClassStr { get { return ".LogEventRequest"; } }
+
+        [JsonProperty("eventKey")]
         public string EventKey { get; set; }
+
+        [JsonProperty("playerId")]
         public string PlayerId { get; set; }
 
         /// <summary>
