@@ -33,6 +33,16 @@ namespace GameSparks.NET.Services
         {
             return JsonConvert.DeserializeObject<EventsResponse>(Requestor.PostString(Urls.LogEventRequest, JsonHelper.SerializeData(requestData)).ResponseJson);
         }
+
+        /// <summary>
+        /// Begin a new LogEventRequest
+        /// </summary>
+        /// <param name="requestData"></param>
+        /// <returns></returns>
+        public EventsResponse LogEventRequest(string requestData)
+        {
+            return JsonConvert.DeserializeObject<EventsResponse>(Requestor.PostString(Urls.LogEventRequest,requestData).ResponseJson);
+        }
         #endregion
 
         #region Asynchronous
@@ -55,6 +65,17 @@ namespace GameSparks.NET.Services
         public async Task<EventsResponse> LogEventRequestAsync(LogEventRequest requestData)
         {
             var res = await Requestor.PostStringAsync(Urls.LogEventRequest, JsonHelper.SerializeData(requestData));
+            return JsonConvert.DeserializeObject<EventsResponse>(res.ResponseJson);
+        }
+
+        /// <summary>
+        /// Begin a new asynchronous LogEventRequest
+        /// </summary>
+        /// <param name="requestData"></param>
+        /// <returns></returns>
+        public async Task<EventsResponse> LogEventRequestAsync(string requestData)
+        {
+            var res = await Requestor.PostStringAsync(Urls.LogEventRequest, requestData);
             return JsonConvert.DeserializeObject<EventsResponse>(res.ResponseJson);
         }
         #endregion
