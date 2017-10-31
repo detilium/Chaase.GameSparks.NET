@@ -29,7 +29,7 @@ namespace GameSparks.NET.Services
         /// </summary>
         /// <param name="requestData"></param>
         /// <returns></returns>
-        public EventsResponse LogEventRequest(LogEventRequest requestData)
+        public EventsResponse LogEventRequest(dynamic requestData)
         {
             return JsonConvert.DeserializeObject<EventsResponse>(Requestor.PostString(Urls.LogEventRequest, JsonHelper.SerializeData(requestData)).ResponseJson);
         }
