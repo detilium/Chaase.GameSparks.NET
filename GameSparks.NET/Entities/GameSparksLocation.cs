@@ -15,7 +15,7 @@ namespace GameSparks.NET.Entities
         public string Country { get; set; }
         [JsonProperty("latitide")]
         public double Latitide { get; set; }
-        [JsonProperty("longtitute")]
+        [JsonProperty("longditute")]
         public double Longditute { get; set; }
     }
 }
