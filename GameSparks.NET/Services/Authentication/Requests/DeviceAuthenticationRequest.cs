@@ -16,7 +16,7 @@ namespace GameSparks.NET.Services.Authentication.Requests
         public string DeviceId { get; set; }
         [JsonProperty("deviceModel")]
         public string DeviceModel { get; set; }
-        [JsonProperty("displayName")]
+        [JsonProperty("deviceName")]
         public string DeviceName { get; set; }
         [JsonProperty("deviceOS")]
         public string DeviceOS { get; set; }
