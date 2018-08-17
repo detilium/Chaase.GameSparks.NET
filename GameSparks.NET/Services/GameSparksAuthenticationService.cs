@@ -246,7 +246,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> FacebookConnectRequestAsync(FacebookConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.FacebookConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -257,7 +257,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> GameCenterConnectRequestAsync(GameCenterConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.GameCenterConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -268,7 +268,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> GooglePlayConnectRequestAsync(GooglePlayConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.GooglePlayConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -279,7 +279,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> GooglePlusConnectRequestAsync(GooglePlusConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.GooglePlusConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -290,7 +290,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> KongregateConnectRequestAsync(KongregateConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.KongregateConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -301,7 +301,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> NXConnectRequestAsync(NXConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.NXConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -312,7 +312,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> PSNConnectRequestAsync(PSNConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.PSNConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -323,7 +323,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> QQConnectRequestAsync(QQConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.QQConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -334,7 +334,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> RegistrationRequestAsync(RegistrationRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.RegistrationRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -345,7 +345,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> SteamConnectRequestAsync(SteamConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.SteamConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -356,7 +356,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> TwitchConnectRequestAsync(TwitchConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.TwitchConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -367,7 +367,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> TwitterConnectRequestAsync(TwitterConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.TwitterConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -378,7 +378,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> ViberConnectRequestAsync(ViberConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.ViberConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -389,7 +389,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> WeChatConnectRequestAsync(WeChatConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.WeChatConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -400,7 +400,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> XBOXLiveConnectRequestAsync(XBOXLiveConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.XBOXLiveConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
 
@@ -411,7 +411,7 @@ namespace GameSparks.NET.Services
         /// <returns>GameSparksAuthentication</returns>
         public async Task<GameSparksAuthenticationResponse> XboxOneConnectRequestAsync(XboxOneConnectRequest requestData)
         {
-            var res = await Requestor.PostStringAsync(Urls.DeviceAuthenticationRequest, SerializeRequest(requestData));
+            var res = await Requestor.PostStringAsync(Urls.XboxOneConnectRequest, SerializeRequest(requestData));
             return DeserializeResponse(res.ResponseJson);
         }
         #endregion
