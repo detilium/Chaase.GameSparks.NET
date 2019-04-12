@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace GameSparks.NET.Services.Leaderboards.Responses
 {
-    public class GameSparksLeaderboardDataResponse : GameSparksBaseResponse
+    public class GameSparksLeaderboardCustomDataResponse<T> : GameSparksBaseResponse
     {
         [JsonProperty("challengeInstanceId")]
         public string ChallengeInstanceId { get; set; }
         [JsonProperty("data")]
-        public List<GameSparksLeaderboardUserData> Data { get; set; }
+        public List<T> Data { get; set; }
         [JsonProperty("first")]
         public List<GameSparksLeaderboardUserData> First { get; set; }
         [JsonProperty("last")]
@@ -24,5 +24,10 @@ namespace GameSparks.NET.Services.Leaderboards.Responses
         public dynamic ScriptData { get; set; }
         [JsonProperty("social")]
         public bool Social { get; set; }
+    }
+
+    // Generic response class that doesn't handle additional custom attributes
+    public class GameSparksLeaderboardDataResponse : GameSparksLeaderboardCustomDataResponse<GameSparksLeaderboardUserData>
+    {
     }
 }

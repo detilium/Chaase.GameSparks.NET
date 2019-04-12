@@ -1,4 +1,5 @@
-﻿using GameSparks.NET.Infrastructure;
+﻿using GameSparks.NET.Entities;
+using GameSparks.NET.Infrastructure;
 using GameSparks.NET.Infrastructure.Helpers;
 using GameSparks.NET.Services.Leaderboards.Requests;
 using GameSparks.NET.Services.Leaderboards.Responses;
@@ -42,6 +43,16 @@ namespace GameSparks.NET.Services
         public GameSparksLeaderboardDataResponse LeaderboardDataRequest(LeaderboardDataRequest requestData)
         {
             return JsonConvert.DeserializeObject<GameSparksLeaderboardDataResponse>(Requestor.PostString(Urls.LeaderboardDataRequest, JsonHelper.SerializeData(requestData)).ResponseJson);
+        }
+
+        /// <summary>
+        /// Begin a new LeaderboardDataRequest and deserialize data objects into type T, where T extends GameSparksLeaderboardUserData
+        /// </summary>
+        /// <param name="requestData"></param>
+        /// <returns></returns>
+        public GameSparksLeaderboardCustomDataResponse<T> LeaderboardDataRequest<T>(LeaderboardDataRequest requestData)
+        {
+            return JsonConvert.DeserializeObject<GameSparksLeaderboardCustomDataResponse<T>>(Requestor.PostString(Urls.LeaderboardDataRequest, JsonHelper.SerializeData(requestData)).ResponseJson);
         }
 
         /// <summary>
