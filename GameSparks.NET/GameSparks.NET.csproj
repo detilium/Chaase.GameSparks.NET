@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <Version>0.2.1.6</Version>
-    <FileVersion>0.2.1.6</FileVersion>
+    <Version>0.2.1.7</Version>
+    <FileVersion>0.2.1.7</FileVersion>
     <Authors>Christian Haase</Authors>
     <Description>GameSparks.NET is a a REST API wrapper for the GameSparks REST API.</Description>
     <Copyright>Copyright (c) 2017 Christian Haase</Copyright>
@@ -22,7 +22,8 @@
     <PackageTags>web rest-api api-wrapper gamesparks .net game</PackageTags>
     <PackageProjectUrl>https://christianhaase.github.io/Chaase.GameSparks.NET/</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/ChristianHaase/Chaase.GameSparks.NET/master/gamesparks.png</PackageIconUrl>
-    <PackageReleaseNotes>- Fixed copy-paste issue in asynchronous request of the GameSparks Authentication service</PackageReleaseNotes>
+    <PackageReleaseNotes>- Added proper class string for LeaderboardDataRequest</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
