@@ -11,7 +11,7 @@ namespace GameSparks.NET.Services.Leaderboards.Requests
     public class LeaderboardDataRequest : GameSparksBaseRequest
     {
         [JsonProperty("@class")]
-        private string ClassStr { get { return ""; } }
+        private string ClassStr { get { return ".LoeaderboardDataRequest"; } }
         [JsonProperty("challengeInstanceId")]
         public string ChallengeInstanceId { get; set; }
         [JsonProperty("dontErrorOnNotSocial")]
